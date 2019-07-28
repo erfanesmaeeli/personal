@@ -1,0 +1,142 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body,
+html {
+	height: 100%;
+	margin: 0 !important
+}
+strong{
+	font-weight: 800
+}
+
+.bgimg {
+	background-image: url(/static/photo/back.jpg);
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.middle {
+	font-size: 20px ;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+hr {
+	background: white;
+	margin: auto;
+}
+
+.timer {
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.fa-telegram {
+	font-size: 50px;
+	margin: 2%;
+	color: #66c0f4;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.fa-instagram {
+	font-size: 50px;
+	margin: 2%;
+	color: #c32aa3;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.fa-github {
+	font-size: 50px;
+	margin: 2%;
+	color: #ff9900;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.fa-telegram:hover {
+	cursor: pointer;
+	color: aliceblue;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.fa-instagram:hover {
+	cursor: pointer;
+	color: aliceblue;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+	cursor: pointer;
+	color: aliceblue;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer{
+	background: url("http://www.vvkaymarine.com/vvkaymarine/images/footerbgd1_1.jpg") no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -150%);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.footer p{
+
+margin-bottom: 0 !important}
+.footer:hover{
+	color:rgb(37, 255, 37);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.middle h4,p{
+	line-height: 3.2
+}
+
+
+@media screen and (max-width:700px) {
+	.middle {
+		top: 35%;
+		font-size: 16px ;
+		line-height: 2;
+	}
+
+	.timer {
+		font-size: 20px;
+	}
+
+	.fa-telegram,.fa-instagram,.fa-github{
+		font-size: 2em;
+	}
+
+}

@@ -1,0 +1,452 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>PY BLOG</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" type="image/png" href={% static 'favicon.png' %} />
+
+	<!-- Bootstrap CSS File -->
+	<link href={% static 'mylib/bootstrap/css/bootstrap.min.css' %} rel="stylesheet">
+
+	<!-- mylibraries CSS Files -->
+	<link href={% static 'mylib/font-awesome/css/font-awesome.min.css' %} rel="stylesheet">
+	<link href={% static 'mylib/animate/animate.min.css' %} rel="stylesheet">
+	<link href={% static 'mylib/ionicons/css/ionicons.min.css' %} rel="stylesheet">
+	<link href={% static 'mylib/owlcarousel/assets/owl.carousel.min.css' %} rel="stylesheet">
+	<link href={% static 'mylib/lightbox/css/lightbox.min.css' %} rel="stylesheet">
+
+	<!-- Main Stylesheet File -->
+	<link href={% static 'css/style.css' %} rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+	<!--/ Nav Star /-->
+	<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll" href="#page-top">ERFAN | Py Blog</a>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+				aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link js-scroll " href="/">Home</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link js-scroll active " href="#python">PYTHON</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link js-scroll" href="#about">About</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link js-scroll" href="#work">Work</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link js-scroll" href="#course">Courses</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link js-scroll" href="#issu">ISSUES</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--/ Nav End /-->
+
+
+
+	<!--/ Intro Skew Star /-->
+	<div id="python" class="intro route bg-image" style="background-image: url({% static 'img/pyblog_back.png' %})">
+
+		<div class="overlay-itro"></div>
+		<div class="intro-content display-table">
+			<div class="table-cell">
+				<div class="container">
+					<!--<p class="display-6 color-d">Hello, world!</p>-->
+					<h1 class="intro-title mb-4">I am Erfan Esmaeeli</h1>
+					<p class="intro-subtitle"><span class="text-slider-items">Lets Start Learn Python Easy</span><strong
+							class="text-slider"></strong></p>
+					<!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ Intro Skew End /-->
+
+	<!-- breadcrumb start -->
+	<br>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Python Blog</li>
+			</ol>
+		</nav>
+	</div>
+
+	<!-- breadcrumb end -->
+
+	<!--/ Section Blog Star /-->
+	<section id="course" class="blog-mf sect-pt4 route">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="title-box text-center">
+						<h3 class="title-a">
+							Courses
+						</h3>
+						<p class="subtitle-a">
+							I will post Python Courses here
+						</p>
+						<div class="line-mf"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card card-blog">
+						<div class="card-img">
+							<a href="/pyblog/"><img src="/media/{{ mypost.first.Image }}" alt="" class="img-fluid"></a>
+						</div>
+						<div class="card-body">
+							<div class="card-category-box">
+								<div class="card-category">
+									<h6 class="category">{{ mypost.first.Name }}</h6>
+								</div>
+							</div>
+							<h3 class="card-title"><a href="#">{{ mypost.first.Title }}</a></h3>
+							<p class="card-description">
+								{{ mypost.first.Description }}
+							</p>
+						</div>
+
+						<div class="card-footer">
+							<div class="post-author">
+								<a href="#">
+									<img src="/static/img/me.jpg" alt="" class="avatar rounded-circle">
+									<span class="author">Erfan</span>
+								</a>
+							</div>
+							<div class="post-date">
+								<span class="ion-ios-clock-outline"></span> {{ mypost.first.DateCreate }}
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<br>
+
+			<!-- <center><button type="button" class="btn btn-outline-primary">Show All Posts ></button></center> -->
+		</div>
+
+	</section>
+	<!--/ Section Blog End /-->
+
+
+	<!--/ Section Issu from Star /-->
+	<section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+		style="background-image: url({% static 'img/issu_back.png' %})">
+		<div class="overlay-yellow"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="contact-mf">
+						<div id="issu" class="box-shadow-full">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="title-box text-center">
+										<h3 class="title-a">
+											SEND ISSU
+										</h3>
+										<p class="subtitle-a">
+											I will Check , Fix And Answer You as soon
+										</p>
+										<div class="line-mf"></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="title-box-2">
+										<h5 class="title-left">
+											Send ISSU EASY
+										</h5>
+									</div>
+									<div>
+										<form action="." method="post">
+											{% csrf_token %}
+											{% if error is True %}
+											<div class="alert alert-success" role="alert">
+												<button type="button" class="close" data-dismiss="alert"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												<h4 class="alert-heading">Well done!</h4>
+												<br>
+												<h6>WoW your message was sent successfully</h6>
+												<hr>
+												<p class="mb-0">I will see it as soon as soon :)</p>
+											</div>
+											{% endif %}
+
+											<div class="row">
+												<div class="col-md-12 mb-3">
+													<img class="hide_in_desktop"
+														src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/607de731234507.564a1d2420e5f.gif"
+														alt="" style="    position: absolute;
+															height: 200px;">
+												</div>
+												<div class="col-md-3 mb-3">
+													<div class="form-group">
+														<label class="input-group-text" for="your_name">Your name
+															(optional)</label>
+														<input type="text" name="name" class="form-control" id="name" />
+													</div>
+												</div>
+
+												<div class="col-md-5 mb-3">
+													<div class="form-group">
+														<label class="input-group-text" for="your_email">Your Email
+															Address *</label>
+														<input type="email" name="email" class="form-control" id="email"
+															required />
+													</div>
+												</div>
+												<div class="col-md-4 mb-3">
+													<div class="input-group mb-3">
+														<div class="input-group-prepend">
+															<label class="input-group-text"
+																for="inputGroupSelect01">Issu Type</label>
+														</div>
+														<select class="custom-select" id="inputGroupSelect01" required
+															aria-required="true">
+															<option value="">Choose one ... *</option>
+															<option value="1">Python Syntax</option>
+															<option value="2">Spoken problem</option>
+															<option value="3">Video Design</option>
+															<option value="4">Poster Dcesign</option>
+															<option value="5">Your Recommend</option>
+															<option value="6">Other</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-8 mb-3">
+													<div class="form-group">
+														<label class="input-group-text" for="your_name">More
+															Details *</label>
+														<textarea class="form-control" name="details"
+															required></textarea>
+													</div>
+												</div>
+												<div class="col-md-4 mb-3">
+													<img class="hide_in_phone"
+														src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/607de731234507.564a1d2420e5f.gif"
+														alt="" style="    position: absolute;
+													height: 200px;">
+												</div>
+												<div class="col-md-8 mb-3">
+													<div class="input-group mb-3">
+														<div class="input-group-prepend">
+															<span class="input-group-text"
+																id="inputGroupFileAddon01">Upload</span>
+														</div>
+														<div class="custom-file">
+															<input type="file" class="custom-file-input"
+																id="inputGroupFile01"
+																aria-describedby="inputGroupFileAddon01">
+															<label class="custom-file-label"
+																for="inputGroupFile01">Click Here - ></label>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<button type="submit"
+														class="button button-a button-big button-rouded">SEND
+														ISSU</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ Section Contact-footer End /-->
+
+
+	<!--/ Section Contact-Footer Star /-->
+	<section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+		style="background-image: url({% static 'img/back-top.jpg' %}">
+		<div class="overlay-yellow " style="opacity: 0.7"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="contact-mf">
+						<div id="contact" class="box-shadow-full">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="title-box-2">
+										<h5 class="title-left">
+											Send Message to Me EASY
+										</h5>
+									</div>
+									<div>
+										<form action="." method="post">
+											{% csrf_token %}
+											{% if error is True %}
+											<div class="alert alert-success" role="alert">
+												<button type="button" class="close" data-dismiss="alert"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												<h4 class="alert-heading">Well done!</h4>
+												<br>
+												<h6>WoW your message was sent successfully</h6>
+												<hr>
+												<p class="mb-0">I will see it as soon as soon :)</p>
+											</div>
+											{% endif %}
+
+											<div class="row">
+												<div class="col-md-7 mb-3">
+													<div class="form-group">
+														<label for="your_name">Your name (optional)</label>
+														<input type="text" name="name" class="form-control" id="name" />
+													</div>
+												</div>
+												<!-- <div class="col-md-12 mb-3">
+					  <div class="form-group">
+						<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" />
+					  </div>
+					</div> -->
+												<!-- <div class="col-md-12 mb-3">
+					  <div class="form-group">
+						<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+					  </div>
+					</div> -->
+												<div class="col-md-10 mb-3">
+													<div class="form-group">
+														<label for="your_name">Your message *</label>
+														<textarea class="form-control" name="message"
+															required></textarea>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<button type="submit"
+														class="button button-a button-big button-rouded">Send
+														Message</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="title-box-2 pt-4 pt-md-0">
+										<h5 class="title-left">
+											Contact Me
+										</h5>
+									</div>
+									<div class="more-info">
+										<ul class="list-ico">
+											<a href="https://goo.gl/maps/qx3tmbrCo23JVhZZA">
+												<li><span class="ion-ios-location"></span> Iran - Tehran - Satarkhan
+												</li>
+											</a>
+											<a href="tel:+98-9195317431">
+												<li><span class="ion-ios-telephone"></span> (0098) 919 531 7431</li>
+											</a>
+											<a href="mailto:erfan@programmer.net">
+												<li><span class="ion-email"></span> erfan@programmer.net</li>
+											</a>
+										</ul>
+									</div>
+									<div class="socials">
+										<ul>
+											<li><a href="http://t.me/eerfan" data-toggle="tooltip"
+													data-placement="bottom" title="my telegram" href=""><span
+														class="ico-circle"><i
+															class="ion-paper-airplane "></i></span></a></li>
+											<li><a href="http://instagram.com/_erfan.esm" data-toggle="tooltip"
+													data-placement="bottom" title="my instagram" href=""><span
+														class="ico-circle"><i
+															class="ion-social-instagram"></i></span></a></li>
+											<li><a href="https://github.com/erfanesmaeeli" data-toggle="tooltip"
+													data-placement="bottom" title="my github" href=""><span
+														class="ico-circle"><i class="ion-social-github"></i></span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="copyright-box">
+							<p class="copyright">&copy; Copyright 2019 <a href="/"
+									class="text-light"><strong>ERFAN-CV</strong></a>.
+								All Rights Reserved</p>
+							<div class="credits">
+
+								Designed by <a href="https://erfanesm.pythonanywhere.com/"><strong>Erfan
+										Esmaeeli</strong></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</section>
+	<!--/ Section Contact-footer End /-->
+
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+	<div id="preloader"></div>
+
+
+</body>
+
+
+<!-- JavaScript mylibraries -->
+<script src={% static 'mylib/jquery/jquery.min.js' %}></script>
+<script src={% static 'mylib/jquery/jquery-migrate.min.js' %}></script>
+<script src={% static 'mylib/popper/popper.min.js' %}></script>
+<script src={% static 'mylib/bootstrap/js/bootstrap.min.js' %}></script>
+<script src={% static 'mylib/easing/easing.min.js' %}></script>
+<script src={% static 'mylib/counterup/jquery.waypoints.min.js' %}></script>
+<script src={% static 'mylib/counterup/jquery.counterup.js' %}></script>
+<script src={% static 'mylib/owlcarousel/owl.carousel.min.js' %}></script>
+<script src={% static 'mylib/lightbox/js/lightbox.min.js' %}></script>
+<script src={% static 'mylib/typed/typed.min.js' %}></script>
+
+
+<!-- Template Main Javascript File -->
+<script src={% static 'js/main.js' %}></script>
