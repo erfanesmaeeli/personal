@@ -13,6 +13,7 @@ class Message(models.Model):
 
 
 class Post(models.Model):
+	publish = models.BooleanField(default=True)
 	Name = models.CharField(max_length=40, null = True)
 	Title = models.CharField(max_length=80 , null = True)
 	Description = models.TextField(blank = True )
@@ -31,18 +32,19 @@ class Post(models.Model):
 		return self.Name
 
 
-class PythonCourse(models.Model):
-    Session = models.IntegerField(default = "0")
-    Title = models.CharField(max_length=80 , null = True)
-    Description = models.TextField(blank = True)
-    Image = models.ImageField(blank=True, null=True, upload_to=settings.MEDIA_ROOT)
-    DateCreate = models.DateTimeField(auto_now_add=True)
+class PythonBasicCourse(models.Model):
+	publish = models.BooleanField(default=True)
+	Session = models.IntegerField(default = "0")
+	Description = models.TextField(blank = True)
+	Image = models.ImageField(blank=True, null=True, upload_to=settings.MEDIA_ROOT)
+	Teacher = models.CharField(max_length=80 , null = True , default = "Erfan Esmaeeli")
+	DateCreate = models.DateTimeField(auto_now_add=True)
 	
-    def url(self):
-        return os.path.join('/',settings.MEDIA_URL, os.path.basename(str(self.Image)))
-    def image_tag(self):
-        return mark_safe('<img src="{}" width="150" height="150"/>'.format(self.url()) )
-    image_tag.short_description = 'Image'
+	def url(self):
+		return os.path.join('/',settings.MEDIA_URL, os.path.basename(str(self.Image)))
+	def image_tag(self):
+		return mark_safe('<img src="{}" width="150" height="150"/>'.format(self.url()) )
+	image_tag.short_description = 'Image'
 
-    def __str__(self):
-        return self.Session       
+	def __str__(self):
+		return str(self.Session)       

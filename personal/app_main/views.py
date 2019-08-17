@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from app_main.forms import SendMessage
-from app_main.models import Message , Post
+from app_main.models import Message , Post , PythonBasicCourse
 import smtplib, ssl
 from django.core.mail import send_mail
 from django.contrib import messages
@@ -9,7 +9,7 @@ import time
 
 
 def index(request):
-	mypost = Post.objects.all()
+	mypost = Post.objects.all().order_by('-id')
 	error = False
 	if request.method == 'POST':
 		name = request.POST.get("name")
@@ -64,11 +64,16 @@ def mysaleh(request):
 
 
 def pyblog(request):
-	mypost = Post.objects.all()
-	return render(request, "pyblog.html", {'mypost' : mypost})
+	PythonBasic = PythonBasicCourse.objects.all().order_by('-id')
+	PythonBasic.reverse()
+
+	return render(request, "pyblog.html", {'PythonBasic' : PythonBasic})
 
 def error_404(request, Exception):
         data = {}
         return render(request,'404.html', data)
 
+
+def pybasic(request):
+	return render(request, "pybasic.html")
 

@@ -115,6 +115,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+# import locale
+# locale.setlocale(locale.LC_ALL, "fa_IR.UTF-8")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

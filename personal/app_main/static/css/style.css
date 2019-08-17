@@ -148,7 +148,6 @@ a:hover {
 }
 
 .title-a {
-  font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -898,28 +897,28 @@ font-size: 20px;
 
 .card-blog{
   position: relative;
-  -webkit-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.3s ease-in;
   -webkit-transform: scale(1);
-  -ms-transition: all 0.15s ease-in;
+  -ms-transition: all 0.3s ease-in;
   -ms-transform: scale(1);
-  -moz-transition: all 0.15s ease-in;
+  -moz-transition: all 0.3s ease-in;
   -moz-transform: scale(1);
-  transition: all 0.15s ease-in;
+  transition: all 0.3s ease-in;
   transform: scale(1);
   border-radius: 20px !important;
 }
 
 .card-blog:hover{
-  box-shadow: 1px 1px 9px #979797;
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
   z-index: 20;
-  -webkit-transition: all 0.15s ease-in;
-  -webkit-transform: scale(1.5);
-  -ms-transition: all 0.15s ease-in;
-  -ms-transform: scale(1.5);
-  -moz-transition: all 0.15s ease-in;
-  -moz-transform: scale(1.5);
-  transition: all 0.15s ease-in;
-  transform: scale(1.010);
+  -webkit-transition: all 0.3s ease-in;
+  -webkit-transform: scale(1.02);
+  -ms-transition: all 0.3s ease-in;
+  -ms-transform: scale(1.02);
+  -moz-transition: all 0.3s ease-in;
+  -moz-transform: scale(1.02);
+  transition: all 0.3s ease-in;
+  transform: scale(1.02);
 }
 .card-blog .card-category-box {
   position: absolute;
@@ -1369,3 +1368,4 @@ footer .credits a {
 }
 
 
+/* py basic css */

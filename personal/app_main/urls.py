@@ -7,7 +7,9 @@ from django.conf.urls import handler404
 
 urlpatterns = [
 	path('',views.index, name = "index"),
-	path('pyblog/', views.pyblog, name = "pyblog")
+	path('pyblog/', views.pyblog, name = "pyblog"),
+	path('pybasic/', views.pybasic, name = "pybasic"),
+
 	# path('sendmessage/',views.sendmessage),
 	# path('msaleh/', views.mysaleh)
 

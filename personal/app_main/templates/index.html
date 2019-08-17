@@ -228,42 +228,38 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card card-blog">
-          <div class="card-img">
-            <a href="/pyblog/"><img src="/media/{{ mypost.first.Image }}" alt="" class="img-fluid"></a>
-          </div>
-          <div class="card-body">
-            <div class="card-category-box">
-              <div class="card-category">
-                <h6 class="category">{{ mypost.first.Name }}</h6>
+      {% for item in mypost%}
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="/pyblog/"><img src="/media/{{ item.Image }}" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">{{ item.Name }}</h6>
+                </div>
               </div>
+              <h3 class="card-title"><a href="#">{{ item.Title }}</a></h3>
+              <p class="card-description">
+                {{ item.Description }}
+              </p>
             </div>
-            <h3 class="card-title"><a href="#">{{ mypost.first.Title }}</a></h3>
-            <p class="card-description">
-              {{ mypost.first.Description }}
-              <br>
-              <hr>
-              <video width="300" controls>
-                  <source src="/media/{{mypost.first.Video}}" type="video/mp4">
-                  Your browser does not support HTML5 video.
-                </video>
-            </p>
-          </div>
 
-          <div class="card-footer">
-            <div class="post-author">
-              <a href="#">
-                <img src="/static/img/me.jpg" alt="" class="avatar rounded-circle">
-                <span class="author">Erfan</span>
-              </a>
-            </div>
-            <div class="post-date">
-              <span class="ion-ios-clock-outline"></span> {{ mypost.first.DateCreate }}
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="/static/img/me.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Erfan</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> {{ item.DateCreate }}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        {% endfor %}
       
     </div>
     <br>

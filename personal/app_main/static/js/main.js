@@ -123,3 +123,14 @@ $('.alert').alert()
 
 // modal
 $('#exampleModalCenter').modal()
+
+
+
+// video player js
+// $(document).ready(function(){
+//     $("a").click(function(e) {
+//         e.preventDefault();
+        
+//         $("#someFrame").attr("src", $(this).attr("href"));
+//     })
+// });	
